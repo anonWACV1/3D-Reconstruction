@@ -1,0 +1,15 @@
+[submodule "third_party/Humans4D"]
+	path = third_party/Humans4D
+	url = https://github.com/shubham-goel/4D-Humans.git
+[submodule "data_generator"]
+	path = data_generator
+	url = https://github.com/Gary-Yifan-Zhang/Carla-Simulation-Dataset-Generator.git
+[submodule "detection/yolov10"]
+	path = detection/yolov10
+	url = https://github.com/Gary-Yifan-Zhang/yolov10.git
+[submodule "detection/detr"]
+	path = detection/detr
+	url = https://github.com/facebookresearch/detr.git
+[submodule "detection/SegFormer"]
+	path = detection/SegFormer
+	url = https://github.com/NVlabs/SegFormer

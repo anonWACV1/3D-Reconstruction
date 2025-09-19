@@ -1,0 +1,12 @@
+{
+	"folders": [
+	  {
+		"path": "."
+	  }
+	],
+	"settings": {
+	  "terminal.integrated.env.linux": {
+		"GIT_SSH_COMMAND": "ssh -i ~/.ssh/id_ed25519 -F /dev/null"
+	  }
+	}
+  }

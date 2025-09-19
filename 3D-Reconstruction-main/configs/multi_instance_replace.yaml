@@ -1,0 +1,25 @@
+# 多人物场景替换配置
+scene_name: 多人物场景替换示例
+description: 同时替换多个SMPL实例，生成单一视频
+output_postfix: _multi_characters
+
+# 实例配置列表
+instances:
+  - instance_id: 0
+    gart_model_dir: "./GART_DATA/frog"
+    keep_translation: true
+    keep_global_rot: true
+    description: "用青蛙模型替换第一个人物"
+
+  - instance_id: 1
+    gart_model_dir: "./GART_DATA/skywalker"
+    keep_translation: true
+    keep_global_rot: true
+    description: "用天行者模型替换第二个人物，同时应用动作20"
+    
+  - instance_id: 2
+    gart_model_dir: "./GART_DATA/trump"
+    new_pose_path: "./motion/30_out.npy"
+    keep_translation: true
+    keep_global_rot: true
+    description: "仅替换第三个人物的动作，使用动作30"

@@ -1,0 +1,18 @@
+# 检查点参数
+source_checkpoint: ""  # 必须设置，从中提取对象的源检查点路径
+target_checkpoint: ""  # 必须设置，插入对象的目标检查点路径
+
+# 节点选择参数
+rigid_ids: null  # 要提取的刚性对象ID列表，例如 [1, 2, 3]
+smpl_ids: null   # 要提取的SMPL对象ID列表
+deformable_ids: null  # 要提取的可变形对象ID列表
+
+# 节点ID偏移参数
+rigid_offset: null  # 插入时添加到刚性对象ID的偏移量
+smpl_offset: null   # 插入时添加到SMPL对象ID的偏移量
+deformable_offset: null  # 插入时添加到可变形对象ID的偏移量
+
+# 输出参数
+output_dir: "output_videos"  # 保存输出视频的目录
+video_name: "inserted_objects"  # 输出视频文件名(不含扩展名)
+fps: 30  # 输出视频的帧率

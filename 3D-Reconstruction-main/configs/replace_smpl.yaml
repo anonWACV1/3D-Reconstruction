@@ -1,0 +1,15 @@
+smpl_params: "ply/sample1.npz"  # 必须包含global_orient, body_pose, betas
+smplx_model_path: "smpl_models/smplx/"  # SMPLX模型目录
+gender: "neutral"
+
+# 输入文件
+ply_path: "ply/sample1.ply"
+
+# 目标场景
+target_checkpoint: "output/Kitti/dataset=Kitti/1cams/checkpoint_final.pth"
+target_instance_id: 1  # 要替换的实例ID
+source_instance_id: 1  # 可选，从哪个实例复制运动参数
+
+# 输出设置
+output_dir: "output"
+video_name: "replaced_smpl"
