@@ -55,6 +55,19 @@ We support most popular public driving datasets. Detailed instructions for downl
 - PandaSet: [Data Process Instruction](docs/Pandaset.md)
 - KITTI: [Data Process Instruction](docs/KITTI.md)
 
+
+
+##Time and resource usage:**
+
+All experiments (3DGS training and rendering) were run on a workstation with a single NVIDIA RTX 6000 Ada Generation GPU (48 GB VRAM), Intel® Core™ i9-10920X CPU @ 3.50 GHz (24 cores), and 64 GB RAM, running CUDA 12.2 with NVIDIA driver 535.247.01.
+
+Data were collected in *CARLA* at 15 FPS with five cameras at 375 × 1242 resolution. We use four 8-second scenarios (each with 120 frames per camera, 600 frames total). Peak GPU memory during training was 40 GB of 48 GB for all scenarios. Per-scenario training times were 00:46:47, 00:48:17, 00:47:32, and 00:41:53 (hh:mm:ss), averaging 46 min 07 s per 8-second scenario at the above settings. For rendering (image to video at 15 FPS), on average, a representative scenario took 6 s with <20 GB GPU VRAM and 7.4 GB RAM.
+
+The measurements above illustrate two practical advantages of 3D Gaussian Splatting for AD/ADAS pipelines. First, training cost is tractable on a single machine: sub-hour per scenario with one high-VRAM GPU (no cluster or multi-GPU orchestration), which makes scaling across many short scenarios a straightforward batch process and enables rapid re-training after edits. Second, inference and rendering are fast: 21 FPS at the stated resolution with modest GPU utilization and <20 GB VRAM, leaving significant headroom for concurrent processes (e.g., perception-in-the-loop evaluation, multi-view rendering, or on-the-fly scenario edits). Together, these properties translate to high throughput and low operational overhead, aligning with industrial needs to generate and re-render large volumes of camera trajectories for development, V&V, and closed-loop testing.
+
+
+
+
 ## 🔧 Preprocessing
 
 ### Standard Dataset Preprocessing
