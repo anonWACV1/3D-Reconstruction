@@ -57,7 +57,7 @@ We support most popular public driving datasets. Detailed instructions for downl
 
 
 
-##Time and resource usage:**
+##Time and resource usage:
 
 All experiments (3DGS training and rendering) were run on a workstation with a single NVIDIA RTX 6000 Ada Generation GPU (48 GB VRAM), Intel® Core™ i9-10920X CPU @ 3.50 GHz (24 cores), and 64 GB RAM, running CUDA 12.2 with NVIDIA driver 535.247.01.
 
